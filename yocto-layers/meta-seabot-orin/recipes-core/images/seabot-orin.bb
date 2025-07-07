@@ -3,3 +3,4 @@ LICENSE = "MIT"
 MACHINE = "jetson-orin-nano-devkit"
 export IMAGE_BASENAME = "seabot-orin"
 
+inherit core-image

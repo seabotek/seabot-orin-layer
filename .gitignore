@@ -4,4 +4,4 @@ yocto-buildir/sstate-cache
 yocto-buildir/tmp
 yocto-buildir/bitbake-cookerdaemon.log
 yocto-buildir/bitbake.lock
-
+flash
