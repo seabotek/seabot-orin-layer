@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  yocto-builder:
+    build:
+      context: .  # Uses the Dockerfile in the same directory
+      args:
+        USER_UID: ${UID:-1000}  # Matches host user's UID (Linux/Mac)
+        USER_GID: ${GID:-1000}
+    image: yocto-dev-orin # Name of the built image
+    container_name: yocto-build-env-orin
+    stdin_open: true  # -i (interactive)
+    tty: true         # -t (pseudo-TTY)
+    volumes:
+      - ./yocto-buildir/:/home/ORIN/poky/build  # Persistent build dir
+      - ./yocto-layers/meta-seabot-orin:/home/ORIN/poky/meta-seabot-orin
+    develop:
+      watch:
+        - action: rebuild
+          path: ./Dockerfile 
+        - action: rebuild
+          path: ./docker-compose.yml
+    user: ORIN  # Run as non-root
+    working_dir: /home/ORIN/poky
+    command: ["/usr/bin/dumb-init", "--", "/bin/bash"]  # Proper init system
