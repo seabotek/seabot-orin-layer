@@ -14,6 +14,9 @@ services:
     volumes:
       - ./yocto-buildir/:/home/ORIN/poky/build  # Persistent build dir
       - ./yocto-layers/meta-seabot-orin:/home/ORIN/poky/meta-seabot-orin
+      - ./yocto-layers/meta-demo-ci:/home/ORIN/poky/meta-demo-ci
+      - ./yocto-layers/meta-tegra-support:/home/ORIN/poky/meta-tegra-support
+      - ./yocto-layers/meta-tegrademo:/home/ORIN/poky/meta-tegrademo
     develop:
       watch:
         - action: rebuild

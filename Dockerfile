@@ -68,6 +68,12 @@ WORKDIR /home/$USERNAME/poky
 RUN git clone https://github.com/openembedded/meta-openembedded.git -b scarthgap 
 # Clone meta-tegra layer 
 RUN git clone https://github.com/OE4T/meta-tegra.git -b scarthgap 
+# clone meta tegra community 
+RUN git clone https://github.com/OE4T/meta-tegra-community.git -b scarthgap 
+# clone tegra-demo-distro
+# RUN git clone https://github.com/OE4T/tegra-demo-distro.git -b scarthgap
+# Meta virtualization 
+RUN git clone git://git.yoctoproject.org/meta-virtualization -b scarthgap
 
 
 
