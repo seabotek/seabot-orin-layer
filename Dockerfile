@@ -58,26 +58,14 @@ RUN apt-get clean && \
 USER $USERNAME
 WORKDIR /home/$USERNAME
 
-# Clone Poky
-RUN git clone git://git.yoctoproject.org/poky -b scarthgap
 
 # Setup Yocto environment (fixed)
-WORKDIR /home/$USERNAME/poky
+WORKDIR /home/$USERNAME/yocto
 
-# clone meta-OE 
-RUN git clone https://github.com/openembedded/meta-openembedded.git -b scarthgap 
-# Clone meta-tegra layer 
-RUN git clone https://github.com/OE4T/meta-tegra.git -b scarthgap 
-# clone meta tegra community 
-RUN git clone https://github.com/OE4T/meta-tegra-community.git -b scarthgap 
-# clone tegra-demo-distro
-# RUN git clone https://github.com/OE4T/tegra-demo-distro.git -b scarthgap
-# Meta virtualization 
-RUN git clone git://git.yoctoproject.org/meta-virtualization -b scarthgap
-
-
-
-RUN echo "source oe-init-build-env" >> ~/.bashrc  # Fixed: Adds to bashrc instead of failing
+# set vim mode 
+RUN echo "set -o vi" >> ~/.bashrc 
+# source oe build environment
+RUN echo "source ${HOME}/yocto/yocto-layers/poky/oe-init-build-env ${HOME}/yocto/yocto-buildir" >> ~/.bashrc  # Fixed: Adds to bashrc instead of failing
 
 # Default command
 CMD ["/bin/bash"]
