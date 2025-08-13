@@ -1,0 +1,28 @@
+{
+    "files.associations": {
+        "*.h": "c",
+        "*.conf": "bitbake",
+        "*.inc": "bitbake"
+    },
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/sources/poky/bitbake/lib",
+        "${workspaceFolder}/sources/poky/meta/lib",
+        "${workspaceFolder}/project//poky/bitbake/lib",
+        "${workspaceFolder}/project/poky/meta/lib",
+        "${workspaceFolder}/project/yocto-layers/poky/bitbake/lib",
+        "${workspaceFolder}/project/yocto-layers/poky/meta/lib"
+    ],
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/sources/poky/bitbake/lib",
+        "${workspaceFolder}/sources/poky/meta/lib",
+        "${workspaceFolder}/project//poky/bitbake/lib",
+        "${workspaceFolder}/project/poky/meta/lib",
+        "${workspaceFolder}/project/yocto-layers/poky/bitbake/lib",
+        "${workspaceFolder}/project/yocto-layers/poky/meta/lib"
+    ],
+    
+    "bitbake.pathToBuildFolder": "${workspaceFolder}/project/yocto-buildir",
+    "bitbake.pathToEnvScript": "${workspaceFolder}/project/yocto-layers/poky/oe-init-build-env",
+    "bitbake.pathToBitbakeFolder": "${workspaceFolder}/project/yocto-layers/poky/bitbake",
+}
+

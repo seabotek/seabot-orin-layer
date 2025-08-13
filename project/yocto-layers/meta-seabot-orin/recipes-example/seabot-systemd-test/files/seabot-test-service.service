@@ -1,0 +1,14 @@
+[Unit]
+Description=Test Service - Logs Current Date to a File
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+Group=nogroup
+ExecStart=/bin/sh -c 'echo "Hello seabot $(date)" >> /tmp/test-seabot-service.log'
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

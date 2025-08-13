@@ -1,13 +1,16 @@
 project/yocto-buildir/cache
 project/yocto-buildir/downloads
 project/yocto-buildir/sstate-cache
-project/yocto-buildir/tmp
+project/yocto-buildir/tmp-glibc
 project/yocto-buildir/bitbake-cookerdaemon.log
 project/yocto-buildir/bitbake.lock
 flash
 project/yocto-layers/meta-openembedded
-./project/yocto-layers/poky
-./project/yocto-layers/meta-tegra
-./project/yocto-layers/meta-tegra-community 
-./project/yocto-layers/meta-virtualization
+project/yocto-layers/poky
+project/yocto-layers/meta-tegra
+project/yocto-layers/meta-tegra-community 
+project/yocto-layers/meta-virtualization
+project/yocto-buildir/pn-buildlist
+project/yocto-buildir/task-depends.dot
+project/yocto-buildir/tmp/
 

@@ -65,7 +65,7 @@ WORKDIR /home/$USERNAME/yocto
 # set vim mode 
 RUN echo "set -o vi" >> ~/.bashrc 
 # source oe build environment
-RUN echo "source ${HOME}/yocto/yocto-layers/poky/oe-init-build-env ${HOME}/yocto/yocto-buildir" >> ~/.bashrc  # Fixed: Adds to bashrc instead of failing
+RUN echo "source ${HOME}/yocto/project/yocto-layers/poky/oe-init-build-env ${HOME}/yocto/project/yocto-buildir" >> ~/.bashrc  # Fixed: Adds to bashrc instead of failing
 
 # Default command
 CMD ["/bin/bash"]
