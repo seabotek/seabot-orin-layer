@@ -26,7 +26,7 @@ PREFERRED_VERSION_linux-yocto-rt ?= "6.6%"
 TCLIBCAPPEND = ""
 
 # set package management
-PACKAGE_CLASSES ?= "package_rpm"
+PACKAGE_CLASSES = "package_deb"
 
 # inlude other configs, taken from the tegra-demo distro 
 require conf/distro/include/no-static-libs.inc

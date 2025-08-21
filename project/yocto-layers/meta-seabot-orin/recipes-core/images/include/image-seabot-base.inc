@@ -5,12 +5,8 @@ inherit core-image
 IMAGE_CLASSES += "image_types_tegra"
 IMAGE_FSTYPES += "tegraflash tar.gz"
 
-
-
 IMAGE_FEATURES:remove = " debug-tweaks"
 
-
-EXTRA_IMAGE_FEATURES += " package-management  "
 IMAGE_INSTALL += "\
         user-seabot \
         "
