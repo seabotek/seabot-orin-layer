@@ -18,3 +18,4 @@
 - [ ] i2c 
 - [ ] udev rules 
 - [ ] net-tools
+- [x] add package URI feed to autyomatically insatll packages using dnf 
