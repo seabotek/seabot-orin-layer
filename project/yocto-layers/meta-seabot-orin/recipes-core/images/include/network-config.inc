@@ -5,4 +5,3 @@ IMAGE_INSTALL += "\
         netplan \
         net-tools \
         "
-
