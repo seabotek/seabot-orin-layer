@@ -13,6 +13,6 @@ SEABOT_USER_PASS = "\$5\$qPXWPBHBD44Ky/n9\$dV92u8Wmk2vy5WOI017CA/zXSGfKorptWpAky
 # Primary group
 SEABOT_USER_PGROUP = "seabot"
 # Supplementary groups
-SEABOT_USER_SGROUPS = "shutdown,users,sudo,docker"
+SEABOT_USER_SGROUPS = "shutdown,users,sudo"
 # set up hostname 
 hostname:pn-base-files = "seabot-orin-nvme"
