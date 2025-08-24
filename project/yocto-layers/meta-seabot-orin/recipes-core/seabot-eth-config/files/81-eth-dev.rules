@@ -1,0 +1,13 @@
+#
+# @project image-seabot
+#
+# @author Moktar SELLAMI <smokthar925@gmail.com>
+#
+# @description  udev rule to rename the ethernet interface
+#
+# @license      CLOSED
+#
+# Copyright (c) 2025 mare-custos.
+#
+
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*",ATTR{address}=="3c:6d:66:11:78:09", NAME="eth0"
