@@ -15,3 +15,4 @@ project/yocto-buildir/task-depends.dot
 project/yocto-buildir/tmp/
 project/yocto-layers/meta-seabot-orin/conf/distro/include/host-build-machine-conf.inc
 .clique.json
+.vscode
