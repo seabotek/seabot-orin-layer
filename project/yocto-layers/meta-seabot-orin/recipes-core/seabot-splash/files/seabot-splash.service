@@ -1,0 +1,13 @@
+[Unit]
+Description=Service to print ASCII art at boot time
+Before=getty@tty.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/seabot-fetch.sh
+StandardOutput=tty
+StandardError=tty
+TTYPath=/dev/ttyTCU0
+
+[Install]
+WantedBy=multi-user.target
