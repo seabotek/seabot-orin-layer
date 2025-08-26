@@ -4,7 +4,7 @@
 - [x] add a user recipe  to be corrected 
 - [x] set rootpass recipe 
 - [ ] set default bash to dash 
-- [ ] add splash screen when booting
+- [x] add splash screen when booting
 - [x] add a hostname 
 - [x] add an ssh connection 
 - [x] add docker support 
@@ -12,10 +12,10 @@
 - [ ] Enable CVE checks
 - [ ] add support for usb gadget ethernet
 - [ ] udev rule for ethernet
-- [ ] add netplan 
+- [x] add netplan 
 - [ ] performance 5w or 12 w and power management 
 - [ ] jetson stat utility 
 - [ ] i2c 
-- [ ] udev rules 
-- [ ] net-tools
+- [x] udev rules 
+- [x] net-tools
 - [x] add package URI feed to autyomatically insatll packages using dnf 
