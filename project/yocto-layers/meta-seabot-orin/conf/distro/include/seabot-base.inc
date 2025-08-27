@@ -19,15 +19,16 @@ MACHINE_FEATURES += "usbgadget"
 #adding support to systemd 
 INIT_MANAGER = "systemd"
 
-# set preferred kerenel version
-PREFERRED_VERSION_linux-yocto ?= "6.6%"
-PREFERRED_VERSION_linux-yocto-rt ?= "6.6%"
+# set preferred kernel
+PREFERRED_PROVIDER_virtual/kernel = "linux-jammy-nvidia-tegra"
 
 TCLIBCAPPEND = ""
 
 # set package management
 PACKAGE_CLASSES = "package_deb"
-
+# disable all glp3 packages 
+INCOMPATIBLE_LICENSE:pn-image-seabot = "GPL-3.0* LGPL-3.0*"
+PREFERRED_VERSION = "GPLv2"
 # inlude other configs, taken from the tegra-demo distro 
 require conf/distro/include/no-static-libs.inc
 require conf/distro/include/yocto-uninative.inc

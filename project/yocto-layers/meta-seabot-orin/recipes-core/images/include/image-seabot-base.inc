@@ -9,4 +9,12 @@ IMAGE_FEATURES:remove = " debug-tweaks"
 
 IMAGE_INSTALL += "\
         user-seabot \
+        seabot-splash \
+        busybox \
+        dash \
         "
+
+ALTERNATIVE:busybox += "dash" 
+# remove bash as its license is GPL3 
+IMAGE_INSTALL:remove = " bash bash-completion alsa alsa-utils coreutils"
+BAD_RECOMMENDATIONS += "bash"
