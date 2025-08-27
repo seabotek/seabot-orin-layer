@@ -8,6 +8,7 @@ flash
 project/yocto-layers/meta-openembedded
 project/yocto-layers/poky
 project/yocto-layers/meta-tegra
+project/yocto-layers/meta-gplv2
 project/yocto-layers/meta-tegra-community 
 project/yocto-layers/meta-virtualization
 project/yocto-buildir/pn-buildlist
@@ -16,3 +17,5 @@ project/yocto-buildir/tmp/
 project/yocto-layers/meta-seabot-orin/conf/distro/include/host-build-machine-conf.inc
 .clique.json
 .vscode
+project/yocto-layers/recipes-test/
+scripts/bb-depends-dot
