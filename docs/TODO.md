@@ -1,6 +1,7 @@
 # TODO
 
 - [ ] set rootfs size to full image using systemd growfs
+- [ ] add cuda support and GPU acceleration support 
 - [x] add a user recipe  to be corrected 
 - [x] set rootpass recipe 
 - [ ] set default bash to dash 
@@ -8,14 +9,16 @@
 - [x] add a hostname 
 - [x] add an ssh connection 
 - [x] add docker support 
-- [ ] disable GPL3 licences 
+- [ ] disable GPL3 licences : BUG remove bash from the image
 - [ ] Enable CVE checks
 - [ ] add support for usb gadget ethernet
-- [ ] udev rule for ethernet
+- [x] udev rule for ethernet
 - [x] add netplan 
 - [ ] performance 5w or 12 w and power management 
 - [ ] jetson stat utility 
 - [ ] i2c 
 - [x] udev rules 
+- [ ] add tty splash on ssh connection
 - [x] net-tools
 - [x] add package URI feed to autyomatically insatll packages using dnf 
+- [ ] BUG: seabot not docker and sudoers group
