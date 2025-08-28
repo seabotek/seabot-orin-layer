@@ -9,4 +9,6 @@ IMAGE_FEATURES:remove = " debug-tweaks"
 
 IMAGE_INSTALL += "\
         user-seabot \
+        seabot-splash \
+        systemd-growfs \
         "
