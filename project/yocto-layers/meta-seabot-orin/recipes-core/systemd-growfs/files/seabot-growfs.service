@@ -1,0 +1,10 @@
+[Unit]
+Description=Service that grows the root partition
+ConditionFirstBoot=true
+
+[Service]
+Type=oneshot
+ExecStart=/lib/systemd/systemd-growfs /
+
+[Install]
+WantedBy=multi-user.target
