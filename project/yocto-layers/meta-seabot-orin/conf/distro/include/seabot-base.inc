@@ -19,9 +19,11 @@ MACHINE_FEATURES += "usbgadget"
 #adding support to systemd 
 INIT_MANAGER = "systemd"
 
-# set preferred kerenel version
-PREFERRED_VERSION_linux-yocto ?= "6.6%"
-PREFERRED_VERSION_linux-yocto-rt ?= "6.6%"
+# add cve checks for recipes 
+# INHERIT += "cve-check" : TODO understand it better and its effects 
+
+# set preferred kernel
+PREFERRED_PROVIDER_virtual/kernel = "linux-jammy-nvidia-tegra"
 
 TCLIBCAPPEND = ""
 
