@@ -1,7 +1,7 @@
 # TODO
 
-- [ ] set rootfs size to full image using systemd growfs
-- [ ] add cuda support and GPU acceleration support 
+- [x] set rootfs size to full image using systemd growfs
+- [ ] add cuda support and GPU acceleration support, test it using [link](https://github.com/stereolabs/zed-sdk/tree/master/body%20tracking/body%20tracking/python) (cuda versiojn should be the same as the one used in ros2 humble == ubuntu 22)
 - [x] add a user recipe  to be corrected 
 - [x] set rootpass recipe 
 - [ ] set default bash to dash 
@@ -14,12 +14,18 @@
 - [ ] add support for usb gadget ethernet
 - [x] udev rule for ethernet
 - [x] add netplan 
-- [ ] performance 5w or 12 w and power management 
-- [*] jetson stat utility 
-- [ ] i2c 
+- [x] performance 5w or 12 w and power management 
+- [ ] i need to understand the power management on the nvidai jetson orin
+- [x] jetson stat utility 
+- [x] i2c 
 - [x] udev rules 
-- [ ] add tty splash on ssh connection
+- [x] add tty splash on ssh connection
 - [x] net-tools
 - [x] add package URI feed to autyomatically insatll packages using dnf 
-- [ ] BUG: seabot not docker and sudoers group
+- [x] BUG: seabot not sudoers group
+- [x] add docker group to seabot user
 - [ ] add project documentation using sphynx 
+- [x] add .bashrc file
+- [ ] optimize boot process
+- [ ] boot process and arm truszone
+- [ ] set up a script that set up, config and inits the project 
