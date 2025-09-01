@@ -1,0 +1,7 @@
+
+services: 
+  seabot-docker:
+    build: 
+      context:  . 
+    image: docker-seabot-test
+    container_name: seabot-test-container
