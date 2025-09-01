@@ -5,3 +5,4 @@ require include/network-config.inc
 require include/virtualization.inc
 require include/seabot-pkg-conf-base.inc
 require include/seabot-tools.inc
+require include/seabot-power-manager.inc
