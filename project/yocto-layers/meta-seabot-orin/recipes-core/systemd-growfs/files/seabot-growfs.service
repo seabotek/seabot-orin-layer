@@ -1,10 +1,9 @@
 [Unit]
 Description=Service that grows the root partition
-ConditionFirstBoot=true
-
+Before=first-boot-complete.target
+ConditionPathExists=!/etc/seabot-firstboot
 [Service]
 Type=oneshot
-ExecStart=/lib/systemd/systemd-growfs /
-
+ExecStart=/usr/bin/seabot-growfs.sh
 [Install]
 WantedBy=multi-user.target

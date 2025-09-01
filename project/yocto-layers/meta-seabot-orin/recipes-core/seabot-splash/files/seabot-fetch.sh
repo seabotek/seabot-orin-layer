@@ -31,13 +31,23 @@ cat <<'ART'
                                      
 ART
 }
-
+get_disk_size(){
+  local _var1=$(df -h | awk 'NR==3 {print $2}')
+  echo ${_var1}
+}
+get_disk_usage(){
+ local _var2=$(df -h | awk 'NR==3 {print $3}')
+ echo ${_var2}
+}
 display_info(){
-cat << 'INF'
+local _disk_size=$(get_disk_size)
+local _disk_usage=$(get_disk_usage)
+echo $_disk_size
+cat << INF
 Welcome to $DISTRO_NAME $VERSION
 
 Platform:   $PLATFORM
-Storage:    $STORAGE_TYPE
+Storage:    $STORAGE_TYPE  ${_disk_usage} / ${_disk_size}
 Linux:      $LINUX_VERSION
 PKG:        $PKG_MANAGER
 INF
