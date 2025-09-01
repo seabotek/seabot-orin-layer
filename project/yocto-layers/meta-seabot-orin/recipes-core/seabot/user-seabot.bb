@@ -5,10 +5,13 @@ LICENSE = "CLOSED"
 
 inherit useradd
 
-RDEPENDS:${PN} += "sudo"
+#handel dependencies
+RDEPENDS:${PN} += "sudo busybox docker"
+DEPENDS += "docker-moby busybox"
 # Apply only for main package
 USERADD_PACKAGES = "${PN}"
-
+# adding groups  
+GROUPADD_PARAM:${PN} = "-g ${SEABOT_USER_GID} ${SEABOT_USER_PGROUP}"
 # User configuration
 USERADD_PARAM:${PN} = " \
     -u ${SEABOT_USER_UID} \
@@ -19,18 +22,13 @@ USERADD_PARAM:${PN} = " \
     -p '${SEABOT_USER_PASS}' \
     ${SEABOT_USER_NAME}"
 
-GROUPADD_PARAM:${PN} = "-g ${SEABOT_USER_GID} ${SEABOT_USER_PGROUP}"
-
 # This package will be empty, so allow it
 ALLOW_EMPTY:${PN} = "1"
 
 # disable splitting debugging info during packaging
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 
-do_install:append(){
-    install -d -m 0755 ${D}${SEABOT_USER_HOMEDIR}
-    chown -R ${SEABOT_USER_NAME}:${SEABOT_USER_PGROUP} ${D}${SEABOT_USER_HOMEDIR} 
-
-
+pkg_postinst_ontarget:${PN}(){
+    chown -R ${SEABOT_USER_NAME}:${SEABOT_USER_PGROUP} $D${SEABOT_USER_HOMEDIR} 
 }
 FILES:${PN} = "${SEABOT_USER_HOMEDIR}"
