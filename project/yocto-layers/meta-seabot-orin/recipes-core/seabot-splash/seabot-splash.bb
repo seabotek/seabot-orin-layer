@@ -31,7 +31,7 @@ do_compile(){
 
 do_install(){
     install -d ${D}${bindir}
-    install -m 0744 ${MY_SCRIPT_PATH} ${D}${bindir}
+    install -m 0755 ${MY_SCRIPT_PATH} ${D}${bindir}
 
     install -d ${D}${SERVICE_DEST_DIR}
     install -m 0644 ${WORKDIR}/seabot-splash.service  ${D}${SERVICE_DEST_DIR}

@@ -4,4 +4,5 @@ IMAGE_INSTALL += "\
         netplan \
         net-tools \
         seabot-eth-config \
+        dropbear \
         "
