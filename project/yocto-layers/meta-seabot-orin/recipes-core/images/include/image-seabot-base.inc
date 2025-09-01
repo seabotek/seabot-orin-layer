@@ -11,4 +11,5 @@ IMAGE_INSTALL += "\
         user-seabot \
         seabot-splash \
         systemd-growfs \
+        seabot-profile-conf \
         "
