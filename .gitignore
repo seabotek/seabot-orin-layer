@@ -19,3 +19,5 @@ project/yocto-layers/meta-seabot-orin/conf/distro/include/host-build-machine-con
 .vscode
 project/yocto-layers/recipes-test/
 scripts/bb-depends-dot
+scripts/bitbake-recipe/
+scripts/startTest.sh
