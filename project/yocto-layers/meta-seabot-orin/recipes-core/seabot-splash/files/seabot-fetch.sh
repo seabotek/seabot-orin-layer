@@ -42,7 +42,6 @@ get_disk_usage(){
 display_info(){
 local _disk_size=$(get_disk_size)
 local _disk_usage=$(get_disk_usage)
-echo $_disk_size
 cat << INF
 Welcome to $DISTRO_NAME $VERSION
 
