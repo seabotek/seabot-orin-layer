@@ -23,7 +23,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
-        gawk wget git-core subversion diffstat unzip \
+        curl gawk wget git-core subversion diffstat unzip \
         sysstat texinfo build-essential chrpath socat \
         python3 python3-pip python3-pexpect python3-virtualenv \
         xz-utils locales cpio screen tmux sudo iputils-ping \
