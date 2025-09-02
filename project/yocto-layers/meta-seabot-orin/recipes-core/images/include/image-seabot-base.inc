@@ -13,3 +13,7 @@ IMAGE_INSTALL += "\
         systemd-growfs \
         seabot-profile-conf \
         "
+
+IMAGE_INSTALL += " \
+                packagegroup-seabot-samples \
+        "

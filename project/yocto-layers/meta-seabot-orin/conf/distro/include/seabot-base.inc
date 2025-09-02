@@ -11,7 +11,7 @@ MAINTAINER = "Moktar SELLAMI <smokthar925@gmail.com>"
 TARGET_VENDOR = "-sb"
 
 # setup distro features 
-SB_DEFAULT_DISTRO_FEATURES = "multiarch usrmerg systemd pam virtualization "
+SB_DEFAULT_DISTRO_FEATURES = "multiarch usrmerg systemd pam virtualization opengl"
 DISTRO_FEATURES ?= "${DISTRO_FEATURES_DEFAULT} ${SB_DEFAULT_DISTRO_FEATURES}"
 
 # setup machine features 
