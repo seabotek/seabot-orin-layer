@@ -37,3 +37,5 @@ require conf/distro/include/security_flags.inc
 # isolates he build system from the host system 
 INHERIT += "uninative"
 
+
+LICENSE_FLAGS_ACCEPTED += "commercial_faad2 "
