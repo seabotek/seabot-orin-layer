@@ -1,7 +1,7 @@
 # TODO
 
 - [x] set rootfs size to full image using systemd growfs
-- [ ] add cuda support and GPU acceleration support, test it using [link](https://github.com/stereolabs/zed-sdk/tree/master/body%20tracking/body%20tracking/python) (cuda versiojn should be the same as the one used in ros2 humble == ubuntu 22)
+- [x] add cuda support and GPU acceleration support, test it using [link](https://github.com/stereolabs/zed-sdk/tree/master/body%20tracking/body%20tracking/python) (cuda versiojn should be the same as the one used in ros2 humble == ubuntu 22)
 - [x] add a user recipe  to be corrected 
 - [x] set rootpass recipe 
 - [ ] set default bash to dash 
@@ -29,3 +29,4 @@
 - [ ] optimize boot process
 - [ ] boot process and arm truszone
 - [ ] set up a script that set up, config and inits the project 
+- [ ] add swap image 
