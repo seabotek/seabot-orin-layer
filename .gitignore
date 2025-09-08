@@ -21,3 +21,5 @@ project/yocto-layers/recipes-test/
 scripts/bb-depends-dot
 scripts/bitbake-recipe/
 scripts/startTest.sh
+docs/make.bat
+docs/build/doctrees/
