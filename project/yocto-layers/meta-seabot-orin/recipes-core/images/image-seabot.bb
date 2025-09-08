@@ -8,3 +8,4 @@ require include/seabot-tools.inc
 require include/seabot-power-manager.inc
 require include/seabot-acceleration.inc
 require include/usb-ethernet.inc
+require include/jetson-swap-image.inc
