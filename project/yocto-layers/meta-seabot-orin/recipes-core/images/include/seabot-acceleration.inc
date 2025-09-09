@@ -31,3 +31,6 @@ IMAGE_INSTALL += "\
     tegra-libraries-multimedia-v4l \
     tegra-container-passthrough \
 "
+IMAGE_INSTALL += "\
+        libuvc \
+        "
