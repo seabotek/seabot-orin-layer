@@ -14,6 +14,7 @@ project/yocto-layers/meta-virtualization
 project/yocto-buildir/pn-buildlist
 project/yocto-buildir/task-depends.dot
 project/yocto-buildir/tmp/
+project/yocto-buildir/workspace
 project/yocto-layers/meta-seabot-orin/conf/distro/include/host-build-machine-conf.inc
 .clique.json
 .vscode
