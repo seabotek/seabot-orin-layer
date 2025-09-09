@@ -12,12 +12,7 @@ services:
     stdin_open: true  # -i (interactive)
     tty: true         # -t (pseudo-TTY)
     volumes:
-      - ./project/:/home/ORIN/yocto/project # Persistent build dir
-    #   - ./yocto-buildir/:/home/ORIN/poky/build  # Persistent build dir
-    #   - ./yocto-layers/meta-seabot-orin:/home/ORIN/poky/meta-seabot-orin
-    #   - ./yocto-layers/meta-demo-ci:/home/ORIN/poky/meta-demo-ci
-    #   - ./yocto-layers/meta-tegra-support:/home/ORIN/poky/meta-tegra-support
-    #   - ./yocto-layers/meta-tegrademo:/home/ORIN/poky/meta-tegrademo
+      - ${ROOT_DIR}:/home/ORIN/yocto/ # Persistent build dir
     develop:
       watch:
         - action: rebuild
@@ -25,5 +20,5 @@ services:
         - action: rebuild
           path: ./docker-compose.yml
     user: ORIN  # Run as non-root
-    working_dir: /home/ORIN/yocto/project
+    working_dir: /home/ORIN/yocto/
     command: ["/usr/bin/dumb-init", "--", "/bin/bash"]  # Proper init system
