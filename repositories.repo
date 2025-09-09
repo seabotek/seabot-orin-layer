@@ -1,0 +1,32 @@
+repositories:
+  project/yocto-layers/poky:
+    type: git
+    url: git://git.yoctoproject.org/poky
+    version: scarthgap
+    path: project/yocto-layers/poky
+  
+  project/yocto-layers/meta-openembedded:
+    type: git
+    url: https://github.com/openembedded/meta-openembedded.git
+    version: scarthgap
+    path: project/yocto-layers/meta-openembedded
+  
+  project/yocto-layers/meta-tegra:
+    type: git
+    url: https://github.com/OE4T/meta-tegra.git
+    version: scarthgap
+  
+  project/yocto-layers/meta-virtualization:
+    type: git
+    url: git://git.yoctoproject.org/meta-virtualization
+    version: scarthgap
+  
+  project/yocto-layers/meta-gplv2-scarthgap:
+    type: git
+    url: https://github.com/DataCollectGmbH/meta-gplv2-scarthgap.git
+    version: scarthgap
+  
+  project/yocto-layers/meta-tegra-community:
+    type: git
+    url: https://github.com/OE4T/meta-tegra-community.git
+    version: scarthgap

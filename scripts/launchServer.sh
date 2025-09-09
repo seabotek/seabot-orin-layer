@@ -1,11 +1,11 @@
 #!/bin/bash
+PROT="8080"
+echo " Starting server at PORT: ${PORT}..."
 
-echo " Starting server ..."
-
-pushd ${HOME}/yocto/project/yocto-buildir/tmp/deploy/deb/
+pushd ${BUILD_DIR}/tmp/deploy/deb/
 
 echo "$(pwd)"
 
-/usr/bin/python3 -m http.server 8080
+/usr/bin/python3 -m http.server ${PORT}
 
 

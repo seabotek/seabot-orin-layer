@@ -10,19 +10,20 @@ ARG TARGETPLATFORM
 ARG USERNAME=ORIN  
 ARG USER_UID=1000 
 ARG USER_GID=1000 
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt update && apt install -y git sudo 
 
 # System setup and user creation
 RUN groupadd --gid $USER_GID $USERNAME \
     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
-    && apt-get update \
-    && apt-get install -y sudo git \
     && echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
 # Install Yocto dependencies
 
 RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        apt-get install -y \
         curl gawk wget git-core subversion diffstat unzip \
         sysstat texinfo build-essential chrpath socat \
         python3 python3-pip python3-pexpect python3-virtualenv \
