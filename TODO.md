@@ -4,18 +4,16 @@
 - [x] add cuda support and GPU acceleration support, test it using [link](https://github.com/stereolabs/zed-sdk/tree/master/body%20tracking/body%20tracking/python) (cuda versiojn should be the same as the one used in ros2 humble == ubuntu 22)
 - [x] add a user recipe  to be corrected 
 - [x] set rootpass recipe 
-- [ ] set default bash to dash 
 - [x] add splash screen when booting
 - [x] add a hostname 
 - [x] add an ssh connection 
 - [x] add docker support 
 - [-] disable GPL3 licences : BUG remove bash from the image
 - [x] Enable CVE checks
-- [ ] add support for usb gadget ethernet
+- [x] add support for usb gadget ethernet
 - [x] udev rule for ethernet
 - [x] add netplan 
 - [x] performance 5w or 12 w and power management 
-- [ ] i need to understand the power management on the nvidai jetson orin
 - [x] jetson stat utility 
 - [x] i2c 
 - [x] udev rules 
@@ -24,9 +22,17 @@
 - [x] add package URI feed to autyomatically insatll packages using dnf 
 - [x] BUG: seabot not sudoers group
 - [x] add docker group to seabot user
-- [ ] add project documentation using sphynx 
 - [x] add .bashrc file
-- [ ] optimize boot process
-- [ ] boot process and arm truszone
-- [ ] set up a script that set up, config and inits the project 
-- [ ] add swap image 
+- [-] optimize boot process: reoved wifi, bluetooth and alsa ... 
+- [ ] update readme file with basic info
+- [ ] measure boot time
+- [ ] setup bash completion
+- [ ] setup dev and realse version
+- [ ] setup bblcass for swap image
+- [x] test zed2i camera  (zed sdk and zed-sdk-ros2)
+- [x] add support for uvc and video multimidia 
+- [x] set up a script that set up, config and inits the project 
+- [x] add swap image 
+- [ ] i need to understand the power management on the nvidia jetson orin
+- [ ] add project documentation using sphynx (Documentation task)
+- [ ] boot process and arm truszone (Documenatation task)
